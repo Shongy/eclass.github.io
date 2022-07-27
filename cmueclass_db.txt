@@ -1,0 +1,298 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : cmue-class
+Source Server Version : 50505
+Source Host           : localhost:3306
+Source Database       : cmueclass_db
+
+Target Server Type    : MYSQL
+Target Server Version : 50505
+File Encoding         : 65001
+
+Date: 2018-04-07 23:23:27
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `accounts_admin`
+-- ----------------------------
+DROP TABLE IF EXISTS `accounts_admin`;
+CREATE TABLE `accounts_admin` (
+  `admin_account_no` int(8) NOT NULL AUTO_INCREMENT,
+  `admin_firstname` varchar(255) DEFAULT NULL,
+  `admin_lastname` varchar(255) DEFAULT NULL,
+  `admin_middleinitial` varchar(255) DEFAULT NULL,
+  `admin_username` varchar(255) DEFAULT NULL,
+  `admin_password` varchar(255) DEFAULT NULL,
+  `admin_email` varchar(255) DEFAULT NULL,
+  `admin_province` varchar(255) DEFAULT NULL,
+  `admin_street` varchar(255) DEFAULT NULL,
+  `admin_bdate` varchar(255) DEFAULT NULL,
+  `admin_gender` varchar(1) DEFAULT NULL,
+  `admin_about` varchar(255) DEFAULT NULL,
+  `admin_phone` decimal(11,0) DEFAULT NULL,
+  `admin_fb` varchar(255) DEFAULT NULL,
+  `admin_twitter` varchar(255) DEFAULT NULL,
+  `admin_gplus` varchar(255) DEFAULT NULL,
+  `admin_site` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`admin_account_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of accounts_admin
+-- ----------------------------
+INSERT INTO `accounts_admin` VALUES ('1', 'Christian', 'Tampus', 'C', 'tanshongy', 'admin', 'tanshongshongy@gmail.com', 'Maramag', 'P-2 North', '1997-06-18', 'M', 'I am me. Im exactly what Im supposed to be me! yeah', '9354974937', 'https://www.facebook.com/tanshongisreal', 'https://www.twitter.com/tanshongshongy', 'https://www.wala.com', 'https://www.facebook.com/tanshongisreal');
+INSERT INTO `accounts_admin` VALUES ('2', 'Rhoneth', 'Fabre', 'M', 'rhoneth', 'rhoneth', null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_admin` VALUES ('3', 'Eugine', 'Lianto', 'M', 'eugine', 'eugine', 'eugine.lianto@gmail.com', '', '', '08-03-1997', 'M', 'Gwapo', '987654321', '', '', '', 'http://www.facebook.com');
+
+-- ----------------------------
+-- Table structure for `accounts_student`
+-- ----------------------------
+DROP TABLE IF EXISTS `accounts_student`;
+CREATE TABLE `accounts_student` (
+  `student_account_no` int(8) NOT NULL AUTO_INCREMENT,
+  `student_firstname` varchar(255) DEFAULT NULL,
+  `student_lastname` varchar(255) DEFAULT NULL,
+  `student_middleinitial` varchar(255) DEFAULT NULL,
+  `student_username` varchar(255) DEFAULT NULL,
+  `student_password` varchar(255) DEFAULT NULL,
+  `student_email` varchar(255) DEFAULT NULL,
+  `student_province` varchar(255) DEFAULT NULL,
+  `student_street` varchar(255) DEFAULT NULL,
+  `student_bdate` varchar(255) DEFAULT NULL,
+  `student_gender` varchar(1) DEFAULT NULL,
+  `student_about` longtext,
+  `student_phone` decimal(11,0) DEFAULT NULL,
+  `student_fb` varchar(255) DEFAULT NULL,
+  `student_twitter` varchar(255) DEFAULT NULL,
+  `student_gplus` varchar(255) DEFAULT NULL,
+  `student_site` varchar(255) DEFAULT NULL,
+  `student_program` varchar(255) DEFAULT NULL,
+  `student_major` varchar(255) DEFAULT NULL,
+  `student_yl` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`student_account_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of accounts_student
+-- ----------------------------
+INSERT INTO `accounts_student` VALUES ('2', 'Christian', 'Tampus', 'F', 'student', 'student', 'mantalaba20@gmail.com', '', '', '07-06-1997', 'M', 'qeqwewqeqwe', '0', '', '', '', '', 'BS Information Technology', null, null);
+INSERT INTO `accounts_student` VALUES ('3', 'Robelyn', 'Tampus', 'C', 'robbie', 'rob', 'blahblah@bla.com', 'Maramag', 'P-2 North', '15-04-1989', 'F', 'Its me again', '9568562358', 'facebook.com/robbie', 'twitter.com/robbie', 'googleplus.ro', 'https://www.facebook.com/tanshongisreal', 'BS Information Technology', 'Multimedia', '4th Year');
+INSERT INTO `accounts_student` VALUES ('4', 'asd', 'asd', 'asd', 'a', '', 'aranez@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('5', 'qweqweqwe', 'eqwe', 'v', 'qweq', 'eqweq', 'ewqe', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('6', 'qwe', 'ewqe', 'eqwe', 'eqw', 'eqwe', 'eqe', 'ewq', 'ew', 'ew', 'e', 'ew', null, 'ew', 'ew', 'ew', 'ew', 'ewwew', 'eww', 'ew');
+INSERT INTO `accounts_student` VALUES ('7', 'John', 'Tajones', 'D', 'sirjohn', '123', 'sirjohn@cmu.edu.ph', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('8', 'Arjay', 'Panaguiton', 'G', 'arjay', '', 'arjay@email.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('9', 'student', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('10', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('11', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('12', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('13', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('14', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('15', 'Eugine', 'Lianto', 'Medel', 'eugine', '', 'eugine.lianto@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('16', 'tanshong ni', 'tamtam', 'canton', 'tantan', '', 'tamtam@gmail.com', '', '', '', 'M', '', '0', '', '', '', '', null, null, null);
+INSERT INTO `accounts_student` VALUES ('17', 'Eugine', 'Lianto', 'Medel', 'eugine616', '', 'erlindacordero26@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_student` VALUES ('18', 'Giovanni', 'Abella', 'Ponce', 'giovanni', '', 'giovanni@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null);
+
+-- ----------------------------
+-- Table structure for `accounts_teacher`
+-- ----------------------------
+DROP TABLE IF EXISTS `accounts_teacher`;
+CREATE TABLE `accounts_teacher` (
+  `teacher_account_no` int(8) NOT NULL AUTO_INCREMENT,
+  `teacher_firstname` varchar(255) DEFAULT NULL,
+  `teacher_lastname` varchar(255) DEFAULT NULL,
+  `teacher_middleinitial` varchar(255) DEFAULT NULL,
+  `teacher_username` varchar(255) DEFAULT NULL,
+  `teacher_password` varchar(255) DEFAULT NULL,
+  `teacher_email` varchar(255) DEFAULT NULL,
+  `teacher_province` varchar(255) DEFAULT NULL,
+  `teacher_street` varchar(255) DEFAULT NULL,
+  `teacher_bdate` varchar(255) DEFAULT NULL,
+  `teacher_gender` varchar(1) DEFAULT NULL,
+  `teacher_about` longtext,
+  `teacher_phone` decimal(11,0) DEFAULT NULL,
+  `teacher_fb` varchar(255) DEFAULT NULL,
+  `teacher_twitter` varchar(255) DEFAULT NULL,
+  `teacher_gplus` varchar(255) DEFAULT NULL,
+  `teacher_site` varchar(255) DEFAULT NULL,
+  `teacher_college` varchar(255) DEFAULT NULL,
+  `teacher_dept` varchar(255) DEFAULT NULL,
+  `teacher_position` varchar(255) DEFAULT NULL,
+  `teacher_confirmationcode` varchar(255) DEFAULT NULL,
+  `teacher_status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`teacher_account_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of accounts_teacher
+-- ----------------------------
+INSERT INTO `accounts_teacher` VALUES ('1', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('2', 'Elaine Amor', 'Mantalaba', 'V', 'amor', 'amor', 'mantalaba20@gmail.com', 'Kitaotao', 'p2', '19-02-1998', 'F', 'LOVE i tad kasd jasd sada sdasd  asd asdsad asd asdasd asd as', '9354974937', 'https://www.facebook.com/bibigirl', 'https://www.twitter.com/tanshongshongy', 'https://www.wala.com', 'https://www.facebook.com/tanshongisreal', 'College of Engineering', 'Institute of Computer Applications', 'Instructor II', null, null);
+INSERT INTO `accounts_teacher` VALUES ('3', 'Angelica', 'Aranez', 'I', 'teacher2', '', 'aranez@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('4', 'Charles Hanz', 'Bautista', 'V.', 'chvb', 'chvb', 'chvb@cmu.edu.ph', 'Maramag', 'Musuan', '01-01-1980', 'M', '', '9999999999', '', '', '', 'http://www.cmu.edu.ph', null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('5', 'John', 'Tajones', 'D', 'sirjohn', '123', 'sirjohn@cmu.edu.ph', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('6', 'Teacher', 'Teacher', 'D', 'teacher', 'teacher', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('7', 'Rhoneth John', 'Fabre', 'M', 'rhonethjohn', 'fabre', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('8', 'Rhoneth John', 'Fabre', 'M', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('9', 'Rhoneth John', 'Fabre', 'M', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('10', 'Rhoneth John', 'Fabre', 'M', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('11', 'Rhoneth John', 'Fabre', 'M', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('12', 'Fabre', 'Rhoneth John', 'Mendez', 'afadf', 'fad', 'dfamail', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('13', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('14', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('15', 'Gerard Jan', 'Estrada', 'Celestial', 'gerardjan', '', 'gerardjanestrada@gmail.com', 'Maramag Bukidnon', 'P-2 North Poblacion', '11-01-1997', 'M', 'Bayot ko', '0', '', '', '', '', null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('16', 'Angeli Raquel', 'Sundo', 'Jamisolamin', 'angeliraquel', '', 'angelisundo@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('17', 'Rhoneth', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('18', 'Eugine', 'Lianto', 'Medel', 'euginelianto', '', 'eugine.lianto@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('19', 'Kent Vincent', 'Butal', 'Sereno', 'kentvincent', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+INSERT INTO `accounts_teacher` VALUES ('20', 'Gerard Jan', 'Estrada', 'Celestial', 'gerardjan', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '2332', 'Inactive');
+INSERT INTO `accounts_teacher` VALUES ('21', 'Gerard Jan', 'Estrada', 'Celestial', 'gerardjan', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '6437', 'Inactive');
+INSERT INTO `accounts_teacher` VALUES ('22', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '18340', 'Inactive');
+INSERT INTO `accounts_teacher` VALUES ('23', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn101', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '7766', 'Inactive');
+INSERT INTO `accounts_teacher` VALUES ('24', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn102', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '20183', 'Inactive');
+INSERT INTO `accounts_teacher` VALUES ('25', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn103', '', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '26137', 'Inactive');
+INSERT INTO `accounts_teacher` VALUES ('26', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn104', 'rhonethjohn', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '10509', 'Inactive');
+INSERT INTO `accounts_teacher` VALUES ('27', 'Rhoneth John', 'Fabre', 'Mendez', 'rhonethjohn105', 'rhonethjohn', 'rhonethjohnfabre@gmail.com', null, null, null, null, null, null, null, null, null, null, null, null, null, '17348', 'Active');
+INSERT INTO `accounts_teacher` VALUES ('28', null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+
+-- ----------------------------
+-- Table structure for `courses`
+-- ----------------------------
+DROP TABLE IF EXISTS `courses`;
+CREATE TABLE `courses` (
+  `class_code` varchar(20) NOT NULL,
+  `teacher_account_no` int(8) DEFAULT NULL,
+  `course_title` varchar(60) DEFAULT NULL,
+  `course_code` varchar(10) DEFAULT NULL,
+  `course_description` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `datecreated` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`class_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of courses
+-- ----------------------------
+INSERT INTO `courses` VALUES ('CLS1BF8SR', '4', 'Programming II', 'IT24', '', 'Active', '2018-03-21');
+INSERT INTO `courses` VALUES ('CLS3IPBDV', '2', 'Engineering Economics', 'CE10', '', 'Active', '2018-03-17');
+INSERT INTO `courses` VALUES ('CLS9XPEF5', '2', 'Fluids and Mechanics', 'ME32', '', 'Active', '2018-03-17');
+INSERT INTO `courses` VALUES ('CLSC4YTCP', '1', 'Fluids and Mechanics', 'ff', 'f', 'Inactive', '2018-03-26');
+INSERT INTO `courses` VALUES ('CLSD58P1I', '3', 'Physical Education', 'PE II', 'dewfreg43hgrtg4g4', 'Active', '2018-04-07');
+INSERT INTO `courses` VALUES ('clsDBMS11', '2', 'Database Management System', 'DBMS', 'Balbj', 'Inactive', '2018-03-16');
+INSERT INTO `courses` VALUES ('clsitngiz', '2', 'Computer Organization', 'IT45', 'This subject is blah blah', 'Inactive', '2018-03-16');
+INSERT INTO `courses` VALUES ('CLSKJV63F', '1', 'pe', 'pe', '', 'Active', '2018-04-05');
+INSERT INTO `courses` VALUES ('clspeepep', '2', 'Physical Education II', 'PE II', 'Test the physical asdasdkj a;kd as', 'Inactive', '2018-03-15');
+INSERT INTO `courses` VALUES ('CLSQW5', '2', 'Algebra', 'Math 11', 'Mathematics', 'Active', '2018-03-17');
+INSERT INTO `courses` VALUES ('CLSYTRI1O', '3', 'Physical Education', 'PE II', 'kwdncijbwjevhwocnuwcn', 'Active', '2018-04-07');
+
+-- ----------------------------
+-- Table structure for `enrolled_students`
+-- ----------------------------
+DROP TABLE IF EXISTS `enrolled_students`;
+CREATE TABLE `enrolled_students` (
+  `enroll_no` int(8) NOT NULL AUTO_INCREMENT,
+  `student_account_no` int(8) DEFAULT NULL,
+  `class_code` varchar(20) DEFAULT NULL,
+  `enroll_date` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`enroll_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of enrolled_students
+-- ----------------------------
+INSERT INTO `enrolled_students` VALUES ('1', '5', 'CLS3IPBDV', '2018-03-17');
+INSERT INTO `enrolled_students` VALUES ('2', '3', 'CLS9XPEF5', '2018-03-17');
+INSERT INTO `enrolled_students` VALUES ('12', '2', 'CLSQW5', '2018-03-18');
+INSERT INTO `enrolled_students` VALUES ('13', '3', 'CLSQW5', '2018-03-18');
+INSERT INTO `enrolled_students` VALUES ('14', '7', 'CLS1BF8SR', '2018-03-21');
+INSERT INTO `enrolled_students` VALUES ('15', '3', 'CLSC4YTCP', '2018-03-26');
+INSERT INTO `enrolled_students` VALUES ('16', '8', 'CLSKJV63F', '2018-04-05');
+INSERT INTO `enrolled_students` VALUES ('17', '2', 'CLSKJV63F', '2018-04-05');
+INSERT INTO `enrolled_students` VALUES ('18', '2', 'CLSYTRI1O', '2018-04-07');
+INSERT INTO `enrolled_students` VALUES ('19', '7', 'CLSYTRI1O', '2018-04-07');
+INSERT INTO `enrolled_students` VALUES ('20', '8', 'CLSD58P1I', '2018-04-07');
+INSERT INTO `enrolled_students` VALUES ('21', '2', 'CLSYTRI1O', '2018-04-07');
+INSERT INTO `enrolled_students` VALUES ('22', '9', 'CLS9XPEF5', '2018-04-07');
+INSERT INTO `enrolled_students` VALUES ('23', '16', 'CLS9XPEF5', '2018-04-07');
+
+-- ----------------------------
+-- Table structure for `file_details`
+-- ----------------------------
+DROP TABLE IF EXISTS `file_details`;
+CREATE TABLE `file_details` (
+  `file_idno` int(8) NOT NULL AUTO_INCREMENT,
+  `post_no` varchar(20) DEFAULT NULL,
+  `file_name` text,
+  `file_link_or_path` text,
+  PRIMARY KEY (`file_idno`)
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of file_details
+-- ----------------------------
+INSERT INTO `file_details` VALUES ('1', '1', 'FEB - Copy.xlsx', 'classfiles/clsDBMS11/FEB - Copy.xlsx');
+INSERT INTO `file_details` VALUES ('2', '1', 'FEB.xlsx', 'classfiles/clsDBMS11/FEB.xlsx');
+INSERT INTO `file_details` VALUES ('3', '2', 'accounts_admin.sql', 'classfiles/clsDBMS11/accounts_admin.sql');
+INSERT INTO `file_details` VALUES ('4', '2', 'answers.sql', 'classfiles/clsDBMS11/answers.sql');
+INSERT INTO `file_details` VALUES ('5', '3', 'bibigirl sched.jpg', 'classfiles/clsDBMS11/bibigirl sched.jpg');
+INSERT INTO `file_details` VALUES ('6', '3', 'dynamically generate form-field-using-jquery.zip', 'classfiles/clsDBMS11/dynamically generate form-field-using-jquery.zip');
+INSERT INTO `file_details` VALUES ('7', '4', 'inputfieldmulti.txt', 'classfiles/CLS3IPBDV/inputfieldmulti.txt');
+INSERT INTO `file_details` VALUES ('8', '4', 'javascript - Adding input elements dynamically to form - Stack Overflow.pdf', 'classfiles/CLS3IPBDV/javascript - Adding input elements dynamically to form - Stack Overflow.pdf');
+INSERT INTO `file_details` VALUES ('9', '4', 'javascript - Create _div_ and append _div_ dynamically - Stack Overflow.pdf', 'classfiles/CLS3IPBDV/javascript - Create _div_ and append _div_ dynamically - Stack Overflow.pdf');
+INSERT INTO `file_details` VALUES ('10', '4', 'js to php.pdf', 'classfiles/CLS3IPBDV/js to php.pdf');
+INSERT INTO `file_details` VALUES ('11', '4', 'larav.txt', 'classfiles/CLS3IPBDV/larav.txt');
+INSERT INTO `file_details` VALUES ('12', '4', 'maxsize.pdf', 'classfiles/CLS3IPBDV/maxsize.pdf');
+INSERT INTO `file_details` VALUES ('13', '4', 'maxsize2.pdf', 'classfiles/CLS3IPBDV/maxsize2.pdf');
+INSERT INTO `file_details` VALUES ('14', '4', 'modal image.txt', 'classfiles/CLS3IPBDV/modal image.txt');
+INSERT INTO `file_details` VALUES ('15', '6', 'http://localhost/cmue-class/main/mycourse.php', 'http://localhost/cmue-class/main/mycourse.php');
+INSERT INTO `file_details` VALUES ('19', '10', 'FEB.xlsx', 'classfiles/CLSQW5/FEB.xlsx');
+INSERT INTO `file_details` VALUES ('20', '11', 'http://localhost/cmue-class/main/mycourse.php', 'http://localhost/cmue-class/main/mycourse.php');
+INSERT INTO `file_details` VALUES ('21', '12', 'How to Make a Simple JavaScript Quiz â€” SitePoint.pdf', 'classfiles/clsDBMS11/How to Make a Simple JavaScript Quiz â€” SitePoint.pdf');
+INSERT INTO `file_details` VALUES ('22', '12', 'inputfieldmulti.txt', 'classfiles/clsDBMS11/inputfieldmulti.txt');
+INSERT INTO `file_details` VALUES ('23', '13', 'http://localhost/cmue-class/main/login.php', 'http://localhost/cmue-class/main/login.php');
+INSERT INTO `file_details` VALUES ('24', '14', '123.jpg', 'classfiles/CLS9XPEF5/123.jpg');
+INSERT INTO `file_details` VALUES ('25', '14', '11703045_860956957319630_5208143255941529222_n.jpg', 'classfiles/CLS9XPEF5/11703045_860956957319630_5208143255941529222_n.jpg');
+INSERT INTO `file_details` VALUES ('31', '23', 'asd', 'asd');
+INSERT INTO `file_details` VALUES ('32', '24', 'tanshong', 'tanshong');
+INSERT INTO `file_details` VALUES ('33', '26', 'tan', 'tan');
+INSERT INTO `file_details` VALUES ('35', '28', 'CLSVYUH1W CLSVYUH1W CLSVYUH1W\r\nCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1W CLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1W CLSVYUH1W CLSVYUH1W CLSVYUH1W', 'CLSVYUH1W CLSVYUH1W CLSVYUH1W\r\nCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1W CLSVYUH1WCLSVYUH1WCLSVYUH1WCLSVYUH1W CLSVYUH1W CLSVYUH1W CLSVYUH1W');
+INSERT INTO `file_details` VALUES ('36', '29', 'SpeechDemo final.docx', 'classfiles/CLS1BF8SR/SpeechDemo final.docx');
+INSERT INTO `file_details` VALUES ('37', '29', 'Speechlol.rtf', 'classfiles/CLS1BF8SR/Speechlol.rtf');
+INSERT INTO `file_details` VALUES ('38', '30', 'https://www.youtube.com/watch?v=s7_L1HGXaSA', 'https://www.youtube.com/watch?v=s7_L1HGXaSA');
+INSERT INTO `file_details` VALUES ('39', '31', 'insidious-the-last-key-2018-webrip-1080p-ytsam-arabic-123438.zip', 'classfiles/CLSKJV63F/insidious-the-last-key-2018-webrip-1080p-ytsam-arabic-123438.zip');
+INSERT INTO `file_details` VALUES ('40', '31', 'larav.txt', 'classfiles/CLSKJV63F/larav.txt');
+INSERT INTO `file_details` VALUES ('41', '32', 'http://localhost/cmue-class/main/mycourse.php?classcode=CLS9XPEF5', 'http://localhost/cmue-class/main/mycourse.php?classcode=CLS9XPEF5');
+
+-- ----------------------------
+-- Table structure for `posts`
+-- ----------------------------
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE `posts` (
+  `post_no` int(8) NOT NULL AUTO_INCREMENT,
+  `class_code` varchar(20) DEFAULT NULL,
+  `posted_date` datetime DEFAULT NULL,
+  `post_type` varchar(20) DEFAULT NULL,
+  `post_title` varchar(255) DEFAULT NULL,
+  `post_desc` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`post_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of posts
+-- ----------------------------
+INSERT INTO `posts` VALUES ('1', 'clsDBMS11', '2018-03-18 07:10:21', 'files', 'STUDYHI NINYO NI', 'SDASDASDdas asda sda da sdas ');
+INSERT INTO `posts` VALUES ('2', 'clsDBMS11', '2018-03-18 07:12:02', 'files', 'HI GUYS', 'das dasd asd asd asd');
+INSERT INTO `posts` VALUES ('3', 'clsDBMS11', '2018-03-18 08:05:36', 'files', 'POST NAKO KARUN ', 'BLA');
+INSERT INTO `posts` VALUES ('4', 'CLS3IPBDV', '2018-03-18 08:07:41', 'files', 'trial', 'wahhhhh');
+INSERT INTO `posts` VALUES ('6', 'CLS3IPBDV', '2018-03-18 08:37:03', 'link', 'Linksssss', 'asdasd');
+INSERT INTO `posts` VALUES ('11', 'CLSQW5', '2018-03-18 12:29:36', 'link', 'ss', 's');
+INSERT INTO `posts` VALUES ('12', 'clsDBMS11', '2018-03-19 02:35:08', 'files', 'assadasdsadsad', 'asdasdas');
+INSERT INTO `posts` VALUES ('13', 'clsDBMS11', '2018-03-19 02:41:44', 'link', 'Login MO DIRI', '');
+INSERT INTO `posts` VALUES ('28', 'CLSVYUH1W', '2018-03-19 08:34:51', 'announcement', 'Announcement', 'CLSVYUH1W');
+INSERT INTO `posts` VALUES ('29', 'CLS1BF8SR', '2018-03-21 03:13:39', 'files', 'Study the files', '');
+INSERT INTO `posts` VALUES ('30', 'CLSC4YTCP', '2018-03-26 16:06:05', 'link', 'f', 'f');
+INSERT INTO `posts` VALUES ('31', 'CLSKJV63F', '2018-04-05 04:00:44', 'files', 'POST NAKO KARUN ', '');
+INSERT INTO `posts` VALUES ('32', 'CLS9XPEF5', '2018-04-05 04:03:09', 'link', 'ik', '');
